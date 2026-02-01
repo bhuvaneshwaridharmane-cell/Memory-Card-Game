@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta viewport="viewport" content="width=device-width,intial-scale=1.0">
+        <title>Memory Card Game</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+            <div class="game-container">
+                <div class="header">
+                    <h1><i class="fas fa-star"></i>Memory Card Game</h1>
+                    <p class="subtitle">Match pairs of card to win!</p>
+                </div>
+                <div class="game-controls">
+                    <div class="controls-left">
+                        <div class="grid-selector">
+                            <button class="grid-btn active" id="grid4-btn">4×4 Grid (8 pairs)</button>
+                            <button class="grid-btn" id="grid6-btn">6×6 Grid (18 pairs)</button>
+                        </div>
+                
+                        <button id="new-game-btn">
+                            <i class="fas fa-redo"></i> New Game
+                        </button>
+                    </div>
+
+                    <div class="controls-right">
+                    <div class="stats">
+                        <div class="stat-box">
+                            <i class="fas fa-clock"></i>
+                            <div>Time: <span id="timer">0</span></div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-sync-alt"></i>
+                            <div>Moves: <span id="moves">0</span></div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-star"></i>
+                            <div>Matches: <span id="matches">0</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-board grid-4" id="game-board">
+                <!-- Cards will be generated here by JavaScript -->
+            </div>
+
+            <div class="game-info">
+                <div class="instructions">
+                <h3>How to Play:</h3>
+                <ul>
+                    <li>Click on cards to flip them over and reveal their symbols</li>
+                    <li>Find two cards with the same symbol to make a match</li>
+                    <li>Try to find all matching pairs in the least amount of moves and time</li>
+                    <li>Choose between 4×4 (easier) or 6×6 (harder) grid sizes</li>
+                </ul>
+            </div>
+
+            <footer>
+            <p>Created with<i class="fas fa-heart"></i> using HTML,CSS &JavaScript </p>
+            </footer>
+        </div>
+    </div>
+
+    <div class="win-message" id="win-message">
+        <div class="win-content">
+            <h2>Congratulations! <i class="fas fa-trophy"></i></h2>
+            <p>You've matched all the cards!</p>
+            <p id="win-stats">You made <span id="final-moves">0</span> moves in <span id="final-time">0</span> seconds</p>
+            <button id="play-again-btn">
+                <i class="fas fa-play"></i> Play Again
+            </button>
+        </div>
+    </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
